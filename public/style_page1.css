@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  text-align: center;
+
+  background-color: black;
+
+
+}
+
+@font-face {
+    font-family: "enhypen";
+    src: url("/assets/earthorbiterxtrabold.ttf") format("truetype");
+}
+
+
+
+.roboto-mono{
+  font-family: "Roboto Mono";
+  font-optical-sizing: auto;
+  font-weight: 5;
+  font-style: normal;
+}
+
+
+h1 {
+  font-size: 7vw;
+  color: white;
+  position: absolute;
+  font-family: "enhypen";
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+p{
+    font-size: 1.3vw;
+    color: white;
+    position: absolute;
+    font-family: "Roboto Mono";
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+padding-bottom: 40px;
+}  
+
+.i-land-image{
+    display: block;
+    margin: 5vh auto 0;
+    width: 95%;
+    padding-top: 10%
+
+}
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .main-image {
+    width: 400px;
+    border-radius: 12px;
+  }
+
+  .hotspot {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  .info {
+    display: none;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    background: rgba(244, 244, 244, 0.85);
+    color: rgb(169, 81, 30);
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+
+  .hotspot:hover .info {
+    display: block;
+  }
+
+  .spot1 { top: 86vh; left: 66vw; }
+  .spot2 { top: 85vh; left: 69vw; }
+
+   /* Optional: show where the hotspot is */
+  .hotspot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .hotspot:hover::before {
+    background: rgba(255,255,255,0.5);
+  }
