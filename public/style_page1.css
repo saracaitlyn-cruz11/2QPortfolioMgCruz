@@ -37,28 +37,32 @@ h1 {
   z-index: 2;
 }
 
-p{
-    font-size: 1.3vw;
-    color: white;
-    position: absolute;
-    font-family: "Roboto Mono";
-    top: 130%;
+.first_text{
+      position: absolute;
+    top: 20%; /* 5% from top of image */
     left: 50%;
-    transform: translate(-50%, -50%);
-padding-bottom: 40px;
+    transform: translateX(-50%);
+    font-size: 2vw;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    z-index: 200;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
 }  
 
 .i-land-image {
   position: absolute;
-  top: 50%;                 
+  top: 100%;                 
   left: 50%;               
   transform: translate(-50%, -50%); 
   width: 100vw;            
-  height: 100vh;             /* fills half the screen height */
-  object-fit: cover;        /* ensures image fills the area without stretching */
-  z-index: 0;               /* adjust layering if needed */
+  height: 100vh;            
+  object-fit: cover;      
+  z-index: 0;               
   display: block;
   margin-top: 40vw;
+  margin-bottom: 50vw;
 }
 
   
