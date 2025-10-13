@@ -102,3 +102,28 @@ padding-bottom: 40px;
   .hotspot:hover::before {
     background: rgba(255,255,255,0.5);
   }
+
+
+  .header-image
+{
+  position: absolute;
+  top: 20px;          
+  right: 1450px;
+  width: 55px;
+  object-fit: cover;
+  z-index: 11;    
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 11, 11, 0.2);
+  z-index: 10;
+}
