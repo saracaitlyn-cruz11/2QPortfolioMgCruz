@@ -11,7 +11,7 @@ body {
 
 @font-face {
     font-family: "enhypen";
-    src: url("/assets/earthorbiterxtrabold.ttf") format("truetype");
+    src: url("assets/earthorbiterxtrabold.ttf") format("truetype");
 }
 
 
