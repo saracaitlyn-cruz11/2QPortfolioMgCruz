@@ -27,13 +27,14 @@ body {
 
 
 h1 {
-  font-size: 3vw;
+  font-size: 6vw;
   color: white;
   position: absolute;
-  font-family: "enhypen",arial;
+  font-family: "enhypen", arial;
   top: 102%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 p{
@@ -41,7 +42,7 @@ p{
     color: white;
     position: absolute;
     font-family: "Roboto Mono";
-    top: 120%;
+    top: 130%;
     left: 50%;
     transform: translate(-50%, -50%);
 padding-bottom: 40px;
@@ -58,7 +59,15 @@ padding-bottom: 40px;
   z-index: -1;    
 }
 
-
+.header-image
+{
+  position: absolute;
+  top: 20px;          
+  right: 1450px;
+  width: 55px;
+  object-fit: cover;
+  z-index: 11;    
+}
 
 header {
   position: fixed;
@@ -70,7 +79,7 @@ header {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(11, 11, 11, 0.2);
   z-index: 10;
 }
 
@@ -101,5 +110,6 @@ header {
 
 a {
   text-decoration: none;
-  color: rgb(201, 88, 18);
+  color: rgb(130, 58, 13);
 }
+
