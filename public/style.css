@@ -37,6 +37,18 @@ h1 {
   white-space: nowrap;
 }
 
+h2 {
+  font-size: 6vw;
+  color: white;
+  position: absolute;
+  font-family: "enhypen", arial;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+
 p{
     font-size: 1.3vw;
     color: white;
@@ -58,6 +70,32 @@ padding-bottom: 40px;
   object-fit: cover;
   z-index: -1;    
 }
+
+
+.member_pics {
+ display: flex;
+  flex-wrap: wrap;           
+  justify-content: center;   
+
+  margin-top: 170vh;
+  justify-content: center;  
+  gap: 20px;               
+}
+
+.member-img {
+  width: 190px;            
+  height: auto;
+  border-radius: 50%;
+}
+
+.member-name {
+  margin-top: 10px;           /* space between image and name */
+  font-family: "Roboto Mono";
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
 
 .header-image
 {
@@ -87,7 +125,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 170vh; /*ADJUST MAMAYA PLS*/
+  max-height: 600vh; /*ADJUST MAMAYA PLS*/
   overflow-x: hidden; 
   overflow-y: auto;   
   display: flex;
@@ -112,7 +150,7 @@ main {
   background: rgba(238, 238, 238, 0.812);
   color: rgb(17, 15, 15);
   z-index: 10;
-  margin-top: 170vh;   /* adjust HERE ASWELL*/
+  margin-top: 20vh;   /* adjust HERE ASWELL*/
 }
 
 
@@ -172,5 +210,46 @@ bottom: 0;
 a {
   text-decoration: none;
   color: rgb(130, 58, 13);
+}
+
+
+
+
+
+
+.members {
+  margin-top: 10vh;
+  margin-bottom: 0;
+  max-width: 95vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 0 10px rgba(252, 252, 252, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.members table {
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.members th {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.members td {
+  font-family: "Roboto Mono", monospace;
+  padding: 10px;
+  border: 1px solid white;
+  text-align: left;
+  font-size: 0.9rem;
 }
 
