@@ -39,16 +39,13 @@ h1 {
 
 .first_text{
       position: absolute;
-    top: 20%; /* 5% from top of image */
+    top: 140%; /* 5% from top of image */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: white;
     font-family: "Roboto Mono", monospace;
     z-index: 200;
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
 }  
 
 .i-land-image {
@@ -86,9 +83,10 @@ h1 {
   .info {
     display: none;
     position: absolute;
+    font-family: "Roboto Mono";
     top: -60px;
     left: 50%;
-    background: rgba(244, 244, 244, 0.85);
+    background: rgba(238, 238, 238, 0.85);
     color: rgb(169, 81, 30);
     padding: 8px 12px;
     border-radius: 8px;
