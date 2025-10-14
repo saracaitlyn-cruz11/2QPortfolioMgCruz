@@ -99,12 +99,12 @@ main {
   position: relative;
   width: 100%;
   margin-top: 160vh; /* adjust this to match your layout height */
-  padding: 10px 0;
+  padding: 5vh 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.886);
+  backdrop-filter: blur(100px);
+  background: rgba(255, 255, 255, 0.695);
   color: rgb(17, 15, 15);
   font-family: "Roboto Mono";
   z-index: 10;
@@ -141,3 +141,26 @@ a {
   color: rgb(130, 58, 13);
 }
 
+.social_icons
+{
+  display: flex;
+  gap: 20px;
+  height: 20px;
+}
+
+.footer .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem; /* spacing between text and icons */
+}
+
+.footer .social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icons a img:hover {
+  transform: scale(1.2);
+}
