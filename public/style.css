@@ -84,36 +84,69 @@ header {
 }
 
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 170vh; /*ADJUST MAMAYA PLS*/
+  overflow-x: hidden; 
+  overflow-y: auto;   
   display: flex;
   flex-direction: column;
 }
 
 main {
-  flex: 2; /* pushes footer to the bottom */
+  flex: 2; 
   padding-bottom: 40px;
 }
 
 .footer {
-  position: relative;
+  font-family: "enhypen";
+  font-size: 1.5vw;
   width: 100%;
-  margin-top: 160vh; /* adjust this to match your layout height */
-  padding: 5vh 0;
+  padding: 3vh 5vw 0.5vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   backdrop-filter: blur(100px);
-  background: rgba(255, 255, 255, 0.695);
+  background: rgba(238, 238, 238, 0.812);
   color: rgb(17, 15, 15);
-  font-family: "Roboto Mono";
   z-index: 10;
+  margin-top: 170vh;   /* adjust HERE ASWELL*/
 }
 
 
+.footer .footer-right {
+  font-size: 1.0vw;
+  font-family: "Roboto Mono";
+  border-width: 50px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+bottom: 0;
+  position: absolute;
+  right: 19vw;
+}
+
+.footer .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer .social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icons a img:hover {
+  transform: scale(1.2);
+}
+
 .top-boxes {
   display: flex;
-  gap: 20px;
+  gap: 5px;
 }
 
 .box {
@@ -141,26 +174,3 @@ a {
   color: rgb(130, 58, 13);
 }
 
-.social_icons
-{
-  display: flex;
-  gap: 20px;
-  height: 20px;
-}
-
-.footer .social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem; /* spacing between text and icons */
-}
-
-.footer .social-icons a img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
-}
-
-.footer .social-icons a img:hover {
-  transform: scale(1.2);
-}
