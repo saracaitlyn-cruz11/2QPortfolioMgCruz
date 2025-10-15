@@ -5,8 +5,6 @@
     font-style: normal;
 }
 
-
-
 html, body {
   margin: 0;
   padding: 0;
@@ -19,7 +17,7 @@ html, body {
 
 main {
   width: 100%;
-  min-height: 200vh; /* enough space to scroll */
+  min-height: 200vh; 
   position: relative;
 }
 .header-image
@@ -45,9 +43,6 @@ header {
   background: rgba(11, 11, 11, 0.2);
   z-index: 10;
 }
-
-
-
 
 .top-boxes {
   display: flex;
@@ -161,8 +156,6 @@ h1 {
 }
 
 /*members*/
-
-
 .image-container {
   margin-top: 16%;
   width: 400px;
@@ -257,6 +250,7 @@ h2 {
   z-index: 2;
 }
 
+/* episodes table */
 h3 {
   font-size: 6vw;
   color: white;
@@ -335,6 +329,7 @@ h3 {
   border-left: none;
 }
 
+/* footer */
 footer {
   background-color: #e5e5e573;   
   color: black;
