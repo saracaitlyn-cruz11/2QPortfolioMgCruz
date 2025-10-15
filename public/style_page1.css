@@ -159,7 +159,7 @@ section {
 .details th, 
 .details td {
   padding: 1.5vw;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* only horizontal lines */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
 }
 
 .details th {
@@ -217,7 +217,6 @@ section {
   height: 60px;
   cursor: pointer;
   z-index: 1000;
-  background-color: aqua;
 }
 
 .info {
@@ -369,10 +368,10 @@ footer {
   text-align: center;
   font-family: "enhypen", Arial, sans-serif;
   padding: 40px 10px 40px 10px;
-  width: 100vw;                /* ensures full viewport width */
+  width: 100vw;                
   position: relative;
-  left: 50%;                   /* centers the footer horizontally */
-  transform: translateX(-50%); /* cancels any parent padding or flex alignment */
+  left: 50%;                  
+  transform: translateX(-50%); 
   box-sizing: border-box;
   margin-top: 200px;
   z-index: 10;
