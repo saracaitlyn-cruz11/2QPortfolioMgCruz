@@ -13,6 +13,7 @@ html, body {
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   background-color: black;
+  
 }
 
 main {
@@ -256,7 +257,7 @@ h3 {
   color: white;
   position: absolute;
   font-family: "enhypen", arial;
-  top: 340%;
+  top: 335%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
@@ -269,7 +270,7 @@ h3 {
   color: white;
   position: absolute;
   font-family: "Roboto Mono";
-  top: 365%;
+  top: 355%;
   left:50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -340,9 +341,9 @@ footer {
   box-sizing: border-box;
   backdrop-filter: blur(8px);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  position: absolute;             
+  position: absolute;   
+  top: 610%;  
   z-index: 10;
-  margin-top: 130%;
 }
 
 footer h2 {
