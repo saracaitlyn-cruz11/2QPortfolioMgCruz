@@ -1,14 +1,3 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  text-align: center;
-
-  background-color: black;
-
-
-}
-
 @font-face {
     font-family: "enhypen";
     src: url("../assets/earthorbiterxtrabold.ttf?v=2") format("truetype");
@@ -18,49 +7,21 @@ body {
 
 
 
-.roboto-mono{
-  font-family: "Roboto Mono";
-  font-optical-sizing: auto;
-  font-weight: 5;
-  font-style: normal;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: black;
 }
 
-
-h1 {
-  font-size: 6vw;
-  color: white;
-  position: absolute;
-  font-family: "enhypen", arial;
-  top: 102%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-
-p{
-    font-size: 1.3vw;
-    color: white;
-    position: absolute;
-    font-family: "Roboto Mono";
-    top: 130%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-padding-bottom: 40px;
-}
-
-
-.center-image {
-  position: absolute;
-    top: 0;          
-  left: 0;
+main {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;    
+  min-height: 200vh; /* enough space to scroll */
+  position: relative;
 }
-
-
 .header-image
 {
   position: absolute;
@@ -85,20 +46,6 @@ header {
   z-index: 10;
 }
 
-html, body {
-  width: 100vw;
-  padding:0px;
-  max-height: 700vh; /*ADJUST MAMAYA PLS*/
-  overflow-x: hidden; 
-  overflow-y: auto;   
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 2; 
-  padding-bottom: 40px;
-}
 
 
 
@@ -132,17 +79,32 @@ a {
   color: rgb(130, 58, 13);
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5vh auto;
-  padding: 3vw;
+/* top-half */
+.center-image {
+  position: absolute;
+    top: 0;          
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+h1 {
+  font-size: 6vw;
+  color: white;
+  position: absolute;
+  font-family: "enhypen", arial;
+  top: 102%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+/* details table */
 .details {
-  position: static;
-  margin-top: 45%;
+  position: sticky;
+  margin-top: -39%;
+  margin-left: 37%;
   font-family: "Roboto Mono", monospace;
   width: 110vh;
   height: 70vh;
@@ -191,23 +153,22 @@ section {
 
 .poster
 {
+  position: sticky;
   padding: 10vh;
   width: 50vh;
-  margin-top: 45%;
+  margin-top: 55%;
+  margin-left: 5%;
 }
 
+/*members*/
 
 
 .image-container {
-  position: static;
-  display: inline-block;
-}
-
-.main-image {
+  margin-top: 16%;
   width: 400px;
   border-radius: 12px;
-  margin-left:50%;
-  margin-right: 50%;
+  margin-left: 5%;
+  z-index: 500;
 
 }
 
@@ -237,29 +198,29 @@ section {
   display: block;
 }
 
-.spot1  { top: 290vh;  left: 78.5vw; }
-.spot2  { top: 292vh;  left: 74.5vw; }
+.spot1  { top: 292vh;  left: 71.5vw; }
+.spot2  { top: 292vh;  left: 75.5vw; }
 
-.spot4  { top: 257vh;  left: 83.5vw; } 
-.spot5  { top: 256vh;  left: 75.5vw; }
-.spot6  { top: 259vh;  left: 72vw; }
-.spot7  { top: 257vh;  left: 65.5vw; }
-.spot8  { top: 262vh;  left: 59.5vw; }
-.spot9  { top: 261vh;  left: 54.5vw; }
-.spot10 { top: 270vh;  left: 51vw; }
-.spot11 { top: 272vh;  left: 46vw; }
-.spot12 { top: 258.5vh; left: 42.5vw; }
-.spot13 { top: 258.5vh; left: 39.5vw; }
-.spot14 { top: 261vh;  left: 31.5vw; }
-.spot15 { top: 257vh;  left: 26.5vw; }
-.spot16 { top: 257vh;  left: 22.5vw; }
-.spot17 { top: 257vh;  left: 18vw; }
+.spot4  { top: 257vh;  left: 80vw; } 
+.spot5  { top: 256vh;  left: 72.5vw; }
+.spot6  { top: 259vh;  left: 68vw; }
+.spot7  { top: 257vh;  left: 62.5vw; }
+.spot8  { top: 261vh;  left: 56.5vw; }
+.spot9  { top: 259vh;  left: 51.5vw; }
+.spot10 { top: 269vh;  left: 48vw; }
+.spot11 { top: 271vh;  left: 43vw; }
+.spot12 { top: 258.5vh; left: 40.5vw; }
+.spot13 { top: 258.5vh; left: 34.5vw; }
+.spot14 { top: 261vh;  left:28.5vw; }
+.spot15 { top: 257vh;  left: 23.5vw; }
+.spot16 { top: 257vh;  left: 19.5vw; }
+.spot17 { top: 257vh;  left: 14vw; }
 
-.spot22 { top: 292vh;  left: 55vw; }
-.spot21 { top: 292vh;  left: 51.5vw; }
-.spot20 { top: 291.5vh; left: 44.5vw; }
-.spot19 { top: 292vh;  left: 28.5vw; }
-.spot18 { top: 282vh;  left: 16vw; }
+.spot22 { top: 289vh;  left: 52vw; }
+.spot21 { top: 292vh;  left: 48.5vw; }
+.spot20 { top: 289.5vh; left: 41.5vw; }
+.spot19 { top: 292vh;  left: 25.5vw; }
+.spot18 { top: 282vh;  left: 14vw; }
 
 
 
@@ -291,6 +252,7 @@ h2 {
   position: absolute;
   font-family: "Roboto Mono";
   top: 220%;
+  left:50%;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
@@ -300,15 +262,24 @@ h3 {
   color: white;
   position: absolute;
   font-family: "enhypen", arial;
-  top: 330%;
+  top: 340%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
   z-index: 101;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+.text2
+{
+  font-size: 1.3vw;
+  color: white;
+  position: absolute;
+  font-family: "Roboto Mono";
+  top: 365%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 
 .iland-summary {
   padding: 4vh 3vw;
@@ -320,18 +291,20 @@ h3 {
 }
 
 .episode-table {
-  margin-top: 0%;
-  width: 180vh;
+  margin-top: 15%;
+  margin-left: -25px;
+  width: 200vh;
   padding: 10vh;
   border-collapse: collapse;
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(12px);
   border-radius: 10px;
   overflow: hidden;
+  position: absolute;
   box-shadow: 0 8px 30px rgba(0,0,0,0.45);
 }
 
-.episode-table thead th {
+.episode-table  th {
   background: rgba(255,255,255,0.04);
   color: #ffcf9e;
   font-size: 1.0rem;
@@ -341,7 +314,7 @@ h3 {
   text-align: center;
 }
 
-.episode-table tbody td {
+.episode-table td {
   padding: 0.9rem 0.6rem;
   vertical-align: top;
   border-bottom: 1px solid rgba(255,255,255,0.03);
@@ -363,27 +336,23 @@ h3 {
 }
 
 footer {
-  background-color: #e5e5e573;
+  background-color: #e5e5e573;   
   color: black;
   text-align: center;
   font-family: "enhypen", Arial, sans-serif;
-  padding: 40px 10px 40px 10px;
-  width: 100vw;                
-  position: relative;
-  left: 50%;                  
-  transform: translateX(-50%); 
+  padding: 40px 10px;
+  width: 100%;
   box-sizing: border-box;
-  margin-top: 200px;
-  z-index: 10;
   backdrop-filter: blur(8px);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;             
+  z-index: 10;
+  margin-top: 130%;
 }
-
-
 
 footer h2 {
   font-family: "enhypen";
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: black;
 }
@@ -413,3 +382,6 @@ footer p {
   margin: 0;
   color: black;
 }
+
+ 
+
