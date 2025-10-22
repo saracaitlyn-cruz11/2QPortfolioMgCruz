@@ -1,106 +1,430 @@
-@font-face {
-  font-family: "enhypen";
-  src: url(../assets/earthorbiterxtrabold.ttf);
+@font-face { 
+  font-family: "enhypen"; 
+  src: url("../assets/earthorbiterxtrabold.ttf") format("truetype"); 
+  font-weight: normal; 
+  font-style: normal; 
 }
 
-/* ===== GENERAL RESET ===== */
-* {
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "enhypen", sans-serif;
-  background-color: #000000;
-  color: #fff;
-}
-
-/* ===== HEADER ===== */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  background: rgba(11, 11, 11, 0.4);
-  z-index: 10;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.5% 0;
+  height: 100%;
+  overflow-x: hidden; 
+  background-color: black; 
 }
 
-.header-image {
-  position: absolute;
-  top: 1.5%;
-  left: 2%;
-  width: 6%;
-  min-width: 40px;
-  max-width: 70px;
-  object-fit: cover;
-  border-radius: 50%;
-  z-index: 11;
+header { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  padding: 2vh 1vh;
+  display: flex; 
+  justify-content: center;  
+  align-items: center; 
+  backdrop-filter: blur(10px); 
+  background: rgba(11, 11, 11, 0.2); 
+  z-index: 10; 
 }
 
-/* ===== BOXES ===== */
-.top-boxes {
-  display: flex;
+.header-image { 
+  position: absolute; 
+  top: 50%; 
+  left: 2vw; 
+  transform: translateY(-50%);
+  width: 3vw; 
+  object-fit: cover; 
+  z-index: 11; 
+}
+
+.top-boxes { 
+  display: flex; 
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2%;
-  width: 90%;
-  max-width: 1000px;
+  gap: 1.3vw; 
 }
 
-.box {
-  background: rgba(255, 255, 255, 0.15);
+.box { 
+  font-family: "enhypen";
+  background: rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(20px); 
+  color: black; 
+  width: 13vw;
+  height: 5vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 1vw; 
+  border-radius: 1.2vw; 
+  transition: 0.3s; 
+}
+
+.box:hover { 
+  background-color: rgba(51, 51, 51, 0.6); 
+  transform: scale(1.05); 
+}
+
+a { 
+  text-decoration: none; 
+  color: rgb(130, 58, 13); 
+}
+
+.center-image {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  padding-bottom: 10px;      
+}
+
+h1 {
+  position: relative;
+  bottom: 100%;
+  color: white;
+  font-family: "enhypen";
+  font-size: 4vw;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0 auto; 
+  text-align: center;
+  width: 100%;
+  display: block; 
+   text-shadow:
+    0 0 10px #fff, 
+    0 0 20px #fff; 
+}
+
+.poster {
+  margin-left: 3vw;
+  margin-top: 2vw;
+  width: 25vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1vw;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+}
+
+.details {
+  flex: 1;
+  font-family: "enhypen";
+  font-size: 1.5vw;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  width: 18%;
-  min-width: 120px;
-  max-width: 190px;
-  height: 50px;
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 1vw;
+  padding: 1.5vw 2vw;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4), 0 0 40px rgba(255, 165, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  max-width: 50vw;
+  margin-left: 40vw;
+  margin-top: -35vw;
+}
+
+.details:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.7), 0 0 50px rgba(255, 165, 0, 0.4);
+}
+
+.details table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.details th {
+  color: #ffa733;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 150, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 165, 0, 0.3);
+  padding: 0.8vw 1.2vw;
+  text-align: left;
+}
+
+.details td {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2vw;
+  opacity: 0.9;
+  padding: 0.8vw 1.2vw;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.details tr:last-child td {
+  border-bottom: none;
+}
+
+.details tr:hover td {
+  color: #ffb347;
+  text-shadow: 0 0 10px rgba(255, 150, 0, 0.8);
+  transition: 0.3s;
+}
+
+h2 {
+  position: relative;
+  padding-top: 5vw;
+  color: white;
+  font-family: "enhypen";
+  font-size: 4vw;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0 auto; 
+  text-align: center;
+  width: 100%;
+  display: block; 
+   text-shadow:
+    0 0 10px #fff, 
+    0 0 20px #fff; 
+}
+
+.text
+{
+  font-family: "roboto mono", monospace;
+  font-size: 1.5vw;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1vw;
+  padding-bottom: 5vw;
+  text-align: center;
+}
+
+.iland_image {
+  width: 95vw;         
+  height: auto;       
+  display: block;
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hotspot {
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  background: transparent;        
+  border-radius: 50%;
+  box-shadow: none;              
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotspot:hover {
+  transform: none;                
+  box-shadow: none;
+}
+
+.hotspot .info {
+  position: absolute;
+  bottom: 120%; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: rgba(211, 154, 21, 0.789);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-family: "enhypen";
+  font-size: 1vw;
+  padding: 0.5vw 1vw;
+  border-radius: 0.6vw;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hotspot:hover .info {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-0.5vw);
+}
+
+.hotspot .info::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0.5vw;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1) transparent transparent transparent;
+}
+
+.spot1 { top: 71%; left: 75%; }
+.spot2 { top: 70%; left: 79%; }
+.spot3 { top: 50%; left: 60%; }
+.spot4 { top: 46%; left: 84.5%; }
+.spot5 { top: 43%; left: 76.5%; }
+.spot6 { top: 46%; left: 72%; }
+.spot7 { top: 45.5%; left: 65%; }
+.spot8 { top: 47.5%; left: 59%; }
+.spot9 { top: 46.5%; left: 53%; }
+.spot10 { top: 54%; left: 50%; }
+.spot11 { top: 55%; left: 43%; }
+.spot12 { top: 45%; left: 40%; }
+.spot13 { top: 45%; left: 35%; }
+.spot14 { top: 48%; left: 27.5%; }
+.spot15 { top: 44.5%; left: 22%; }
+.spot16 { top: 44.5%; left: 18%; }
+.spot17 { top: 44.5%; left: 12.5%; }
+.spot18 { top: 64%; left: 11%; }
+.spot19 { top: 71%; left: 24%; }
+.spot20 { top: 70%; left: 42%; }
+.spot21 { top: 71%; left: 50%; }
+.spot22 { top: 70%; left: 53%; }
+
+
+h3 {
+  position: relative;
+  padding-top: 5vw;
+  color: white;
+  font-family: "enhypen";
+  font-size: 4vw;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0 auto; 
+  text-align: center;
+  width: 100%;
+  display: block; 
+   text-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff; 
+}
+
+.text2
+{
+  font-family: "roboto mono", monospace;
+  font-size: 1.5vw;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1vw;
+  padding-bottom: 3vw;
+  text-align: center;
+}
+
+.iland-summary {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1em;
-  border-radius: 12px;
-  transition: 0.3s ease;
+  width: 100%;
 }
 
-.box:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.05);
+.episode-table {
+  font-family: "enhypen";
+  font-size: 1.2vw;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 1vw;
+  padding: 1.5vw 2vw;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4),
+              0 0 40px rgba(255, 165, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  width: 90%;
+  border-collapse: collapse;
+  margin: 3vw auto;
 }
 
-a {
+.episode-table:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.7),
+              0 0 50px rgba(255, 165, 0, 0.4);
+}
+
+.episode-table thead th {
+  color: #ffa733;
+  text-shadow: 0 0 10px rgba(255, 150, 0, 0.8);
+  border-bottom: 2px solid rgba(255, 165, 0, 0.4);
+  padding: 1vw;
+  text-align: left;
+}
+
+.episode-table td {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  padding: 0.8vw 1vw;
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+  vertical-align: top;
+}
+
+.part-label {
+  font-weight: bold;
+  color: #ffb347;
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+  background: rgba(255, 140, 0, 0.1);
+  border-right: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.episode-table tbody tr:hover td {
+  color: #ffb347;
+  text-shadow: 0 0 10px rgba(255, 150, 0, 0.8);
+  transition: 0.3s;
+}
+
+.episode-table small {
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer {
+  position: relative;      
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 165, 0, 0.3);
+  box-shadow: 0 -5px 20px rgba(255, 140, 0, 0.3);
+  padding: 0.5vw 0;
+  color: white;
+  font-family: "enhypen";
+  margin-top: 5vw;          
+}
+
+footer h2 {
+  font-size: 1.8vw;
+  color: #ffa733;
+  text-shadow: 0 0 10px rgba(255, 150, 0, 0.8);
+  margin-bottom: 1vw;
+}
+
+footer p {
+    font-family: "roboto mono", monospace;
+  font-size: 0.9vw;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.3vw 0;
+}
+
+footer a {
+  font-family: "roboto mono", monospace;
+  font-size: 1vw;
+  color: #ffa733;
   text-decoration: none;
-  color: rgb(255, 176, 95);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* ===== RESPONSIVENESS ===== */
-@media (max-width: 768px) {
-  .box {
-    width: 40%;
-    font-size: 1em;
-    height: 45px;
-  }
-
-  .header-image {
-    width: 10%;
-  }
+footer a:hover {
+  color: #ffb347;
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.9);
 }
 
-@media (max-width: 480px) {
-  .box {
-    width: 70%;
-    height: 40px;
-    font-size: 0.9em;
-  }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  margin: 1vw 0;
+}
 
-  .header-image {
-    width: 12%;
-  }
+.social-icons img {
+  width: 2.5vw;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 0 5px rgba(255, 140, 0, 0.5));
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.9));
 }
