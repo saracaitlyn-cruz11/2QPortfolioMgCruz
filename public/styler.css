@@ -1,3 +1,5 @@
+
+/*overall styles and fonts*/
 @font-face { 
   font-family: "enhypen"; 
   src: url("../assets/earthorbiterxtrabold.ttf") format("truetype"); 
@@ -14,6 +16,7 @@ html, body {
   background-color: black; 
 }
 
+/*header*/
 header { 
   position: fixed; 
   top: 0; 
@@ -75,6 +78,8 @@ a {
   object-fit: cover;
   padding-bottom: 10px;      
 }
+
+/*overview of page - poster and details*/
 
 h1 {
   position: relative;
@@ -158,6 +163,8 @@ h1 {
   transition: 0.3s;
 }
 
+/* contestants section */
+
 h2 {
   position: relative;
   padding-top: 5vw;
@@ -193,6 +200,7 @@ h2 {
   margin: 0 auto;
 }
 
+/*summary of each episode section */
 h3 {
   position: relative;
   padding-top: 5vw;
@@ -286,6 +294,7 @@ h3 {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/*footer*/
 footer {
   position: relative;      
   width: 100%;
