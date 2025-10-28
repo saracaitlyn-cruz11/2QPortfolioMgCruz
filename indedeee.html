@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruz’ 2nd Quarter Portfolio</title>
+  <link rel="icon" href="https://cdn.brandfetch.io/idJ8Bn8kuB/theme/dark/logo.svg" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- Base ---------- */
+    html,body {
+      margin:0;
+      padding:0;
+      font-family:'Poppins',sans-serif;
+      color:#f0eef6;
+      background:radial-gradient(circle at top,#0b0036 0%,#180642 40%,#2d0b5e 100%);
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    /* ---------- Star Animation ---------- */
+    @keyframes twinkle {
+      0%,100% {opacity:0.6;}
+      50% {opacity:1;}
+    }
+    .stars {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:transparent;
+      overflow:hidden;
+      pointer-events:none;
+      z-index:2;
+    }
+    .stars span {
+      position:absolute;
+      background:rgba(255,255,255,0.8);
+      border-radius:50%;
+      animation:twinkle 3s infinite ease-in-out;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      position:relative;
+      width:100%;
+      height:500px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    header::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url('./4ba5eaf7-36d5-4b59-a0ff-3d32de2c0caa.png') center/cover no-repeat;
+      filter:brightness(70%) saturate(120%) blur(2px);
+      transform:scale(1.05);
+    }
+    header::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at center,rgba(255,200,120,0.1),rgba(10,4,48,0.9));
+    }
+
+    header h1 {
+      position:relative;
+      z-index:5;
+      font-family:'Playfair Display',serif;
+      font-size:3.5rem;
+      color:#fff;
+      letter-spacing:3px;
+      text-shadow:0 0 15px rgba(255,255,255,0.5), 0 0 30px rgba(255,207,102,0.3);
+      animation:fadeIn 2s ease forwards, glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(30px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes glow {
+      from {text-shadow:0 0 15px rgba(255,255,255,0.5);}
+      to {text-shadow:0 0 25px rgba(255,207,102,0.8);}
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(10px);
+      text-align:center;
+      padding:15px 0;
+      position:sticky;
+      top:0;
+      z-index:10;
+      transition:background 0.4s ease;
+    }
+    nav:hover {
+      background:rgba(255,255,255,0.1);
+    }
+    nav ul {
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    nav li {
+      display:inline-block;
+      margin:0 20px;
+    }
+    nav a {
+      text-decoration:none;
+      color:#f0eef6;
+      font-weight:500;
+      transition:color 0.3s ease, text-shadow 0.3s ease;
+    }
+    nav a:hover {
+      color:#ffcf66;
+      text-shadow:0 0 12px rgba(255,207,102,0.8);
+    }
+
+    /* ---------- Main ---------- */
+    main {
+      max-width:900px;
+      margin:80px auto;
+      text-align:center;
+      padding:0 20px;
+    }
+    main h2 {
+      font-family:'Playfair Display',serif;
+      color:#ffcf66;
+      font-size:2.3rem;
+      margin-bottom:25px;
+      text-shadow:0 0 15px rgba(255,207,102,0.3);
+      animation:fadeIn 1.5s ease;
+    }
+    main p {
+      color:#e2def5;
+      line-height:1.8;
+      font-size:1.1rem;
+      margin-bottom:40px;
+    }
+
+    /* ---------- Project Cards ---------- */
+    .projects {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+    }
+    .project-card {
+      background:rgba(255,255,255,0.06);
+      border-radius:20px;
+      width:260px;
+      padding:25px;
+      box-shadow:0 0 30px rgba(255,255,255,0.05);
+      transition:transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+      backdrop-filter:blur(10px);
+    }
+    .project-card:hover {
+      transform:translateY(-10px) scale(1.02);
+      background:rgba(255,255,255,0.1);
+      box-shadow:0 0 40px rgba(255,207,102,0.3);
+    }
+    .project-card a {
+      text-decoration:none;
+      color:#fff;
+      font-weight:500;
+      letter-spacing:0.5px;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align:center;
+      padding:40px 0;
+      color:#cfc7f3;
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(8px);
+      font-size:0.95rem;
+      margin-top:100px;
+    }
+    footer a {
+      color:#ffcf66;
+      text-decoration:none;
+      transition:color 0.3s ease;
+    }
+    footer a:hover {
+      color:#ffe29a;
+      text-shadow:0 0 10px rgba(255,207,102,0.7);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="stars"></div>
+    <h1>Cruz’ 2nd Quarter Portfolio</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="./public/2Q1GMagnesiumCruz.html">Pilot (1st Graded)</a></li>
+      <li><a href="./public/Q21NGMagnesiumCruz.html">The Non-Graded One</a></li>
+      <li><a href="#">Second Graded</a></li>
+      <li><a href="#">Third Graded</a></li>
+      <li><a href="#">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Welcome to My Portfolio</h2>
+    <p>Inspired by the luminous charm of <em>La La Land</em>, this portfolio captures the rhythm of creativity and the glow of progress. Each project reflects a scene in my own story of growth, passion, and learning.</p>
+
+    <div class="projects">
+      <div class="project-card"><a href="#">First Graded Output</a></div>
+      <div class="project-card"><a href="#">Second Graded Output</a></div>
+      <div class="project-card"><a href="#">Non-Graded Work</a></div>
+      <div class="project-card"><a href="#">Major Project</a></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SC Cruz · Designed under the stars ✨ · <a href="#">Back to top</a></p>
+  </footer>
+
+  <script>
+    // generate random stars
+    const starContainer=document.querySelector('.stars');
+    for(let i=0;i<60;i++){
+      const s=document.createElement('span');
+      const size=Math.random()*2+1;
+      s.style.width=size+'px';
+      s.style.height=size+'px';
+      s.style.top=Math.random()*100+'%';
+      s.style.left=Math.random()*100+'%';
+      s.style.animationDuration=(2+Math.random()*3)+'s';
+      starContainer.appendChild(s);
+    }
+  </script>
+</body>
+</html>

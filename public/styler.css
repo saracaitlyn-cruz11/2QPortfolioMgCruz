@@ -198,7 +198,16 @@ h2 {
   height: auto;       
   display: block;
   margin: 0 auto;
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 1vw;
+  padding: 1vw;
+  box-shadow: 0 0 50px rgba(255, 140, 0, 0.4), 0 0 40px rgba(255, 165, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+
 
 /*summary of each episode section */
 h3 {
@@ -369,6 +378,7 @@ footer {
   width: 100%;
   text-align: center;
   background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.101);
   backdrop-filter: blur(15px);
   border-top: 1px solid rgba(255, 165, 0, 0.3);
   box-shadow: 0 -5px 20px rgba(255, 140, 0, 0.3);
