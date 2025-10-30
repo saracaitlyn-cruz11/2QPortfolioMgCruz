@@ -1,40 +1,85 @@
-/* Reset + Base */
+
+@font-face { 
+  font-family: "amelie"; 
+  src: url("../assets/Champion_BQ_Regular.otf") format("opentype"); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+
+/* ------------------------------
+   Base
+------------------------------ */
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #faf3e0;
-  color: #1b1b1b;
+  font-family: "Poppins", sans-serif;
+  background-color: #fffaf3; /* creamy, warm backdrop */
+  color: #2e1f1b;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Header Image */
-.header {
-  display: block;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+/* ------------------------------
+   Hero Header Section
+------------------------------ */
+header {
   position: relative;
-  top: 0;
+  width: 100%;
+  height: 85vh; /* big cinematic banner */
+  overflow: hidden;
 }
 
-/* Page Title */
+header::before {
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0,0,0,0.6));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 header h1 {
   position: absolute;
-  top: 40px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
-  font-family: 'Georgia', serif;
+  transform: translate(-50%, -50%);
+  font-family: "amelie", serif;
+  font-size: 4rem;
+  color: #f5e7cc;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  letter-spacing: 1.5px;
+  z-index: 2;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Navigation Bar */
+/* subtle entry */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* ------------------------------
+   Navigation Bar
+------------------------------ */
 nav {
   background-color: #3c2a21;
-  text-align: center;
   padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav ul {
@@ -45,41 +90,60 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 nav ul li a {
-  color: #faf3e0;
+  color: #f8e8d0;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-family: "amelie";
+  font-size: 1.2rem;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 nav ul li a:hover {
-  color: #d89a9e;
+  background-color: #b4432c;
+  color: #fffaf3;
+  box-shadow: 0 0 10px rgba(180, 67, 44, 0.3);
 }
 
-/* Main Content */
+/* ------------------------------
+   Main Content
+------------------------------ */
 div {
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px;
 }
 
 div h1 {
+  font-family: "amelie";
+  color: #3a2822;
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 div img {
-  border-radius: 10px;
-  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
 }
 
-/* Footer */
+div img:hover {
+  transform: scale(1.03);
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
 footer {
   background-color: #3c2a21;
-  color: #faf3e0;
+  color: #f8e8d0;
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
+  padding: 25px;
+  font-size: 1rem;
+  font-family: "amelie", serif;
+  border-top: 3px solid #b4432c;
 }
